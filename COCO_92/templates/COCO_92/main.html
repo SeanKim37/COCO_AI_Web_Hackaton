@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+    <!-- CSS 연동 -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Google Icon -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>SPORTS 92</title>
+
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar"
+     style="border-bottom: solid 2px dimgray; padding: 0px 0px; background: #020715; position: fixed; top: 0; width: 100%; height: 100px; color: white">
+    <div class="container-fluid">
+        <div class="navbar_right">
+            <a class="navbar-brand" href="">
+                <img class="navbar-brand_img"
+                     src="http://drive.google.com/uc?export=view&id=1N5O7UUEnFgNh69PsGs-amuflr7v2SAeD">
+            </a>
+            <a class="navbar_select" href="">
+                SPORTS 92
+            </a>
+            <a class="navbar_select" href="">
+                ABILITY
+            </a>
+            <a class="navbar_select" href="">
+                WINLOSE
+            </a>
+            <a class="navbar_select" href="">
+                COMMUNITY
+            </a>
+        </div>
+        <div class="navbar_left">
+            <a class="navbar_login" href="">
+                LOGIN
+            </a>
+            <a class="navbar_login_middle">
+                |
+            </a>
+            <a class="navbar_login" href="">
+                JOIN
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="main_content">
+    <div class="main_inside">
+
+        <div class="kbo_video" id="main_1">
+            <div class="video_inside">
+                <iframe width="100%" height="100%" title="sports 92" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        src="https://www.youtube.com/embed/CbXpQH41_-o?controls=0&autoplay=1&mute=1&modestbranding=1&end=26&loop=1&playlist=CbXpQH41_-o">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="game_schedule" id="main_2">
+            <div class="schedule_inside">
+                <div id="game_date" class="schedule_info">
+                    <a class="schedule_way" href="https://www.koreabaseball.com/Schedule/Schedule.aspx">
+                        <span class="material-icons-outlined">
+                            arrow_back_ios
+                        </span>
+                    </a>
+                    <span class="schedule_date">
+                        2022.08.05<span class="schedule_date_day"> (금)</span>
+                    </span>
+                    <a class="schedule_way" href="https://www.koreabaseball.com/Schedule/Schedule.aspx">
+                        <span class="material-icons-outlined">
+                            arrow_forward_ios
+                        </span>
+                    </a>
+                </div>
+
+                <div class="schedule_team">
+                    <div class="schedule_game">
+                        <div class="game_info">
+                            잠실 | 18:30
+                        </div>
+                        <div class="game_now">
+                            경기 예정
+                        </div>
+                        <div class="game_team">
+                            <a href="https://www.heroesbaseball.co.kr/index.do">
+                                <img class="game_team_img"
+                                     src="http://ticketimage.interpark.com/TicketImage/sports/web/large/PB003.png">
+                            </a>
+                            <img class="game_team_vs" src="https://liquipedia.net/commons/images/0/0e/VS_Gaming.png">
+                            <a href="https://www.lgtwins.com/service/html.ncd?view=/pc_twins/twins_main/twins_main">
+                                <img class="game_team_img" src="https://www.lgtwins.com/images/twins_logoB.png">
+                            </a>
+                        </div>
+                        <div class="game_view">
+                            <a href="https://www.lgtwins.com/service/html.ncd?baRs=OUT_DS&view=%2Fpc_twins%2Fticket%2Fticketbuy&actID=BR_RetrieveTicketing">
+                                <button id="game_ticket_btn" type="button" class="btn btn-primary">TICKET</button>
+                            </a>
+                            <a href="#">
+                                <button id="game_preview_btn" type="button" class="btn btn-danger">PREVIEW</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="schedule_game">
+                        <div class="game_info">
+                            문학 | 18:30
+                        </div>
+                        <div class="game_now">
+                            경기 예정
+                        </div>
+                        <div class="game_team">
+                            <a href="https://www.samsunglions.com/index.asp">
+                                <img class="game_team_img"
+                                     src="https://t1.daumcdn.net/cfile/tistory/9981C0455ECE519338">
+                            </a>
+                            <img class="game_team_vs" src="https://liquipedia.net/commons/images/0/0e/VS_Gaming.png">
+                            <a href="http://www.ssglanders.com/main">
+                                <img class="game_team_img"
+                                     src="https://upload.wikimedia.org/wikipedia/en/8/86/SSG_Landers.png">
+                            </a>
+                        </div>
+                        <div class="game_view">
+                            <a href="https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07001&TeamCode=PB002">
+                                <button id="game_ticket_btn" type="button" class="btn btn-primary">TICKET</button>
+                            </a>
+                            <a href="#">
+                                <button id="game_preview_btn" type="button" class="btn btn-danger">PREVIEW</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="schedule_game">
+                        <div class="game_info">
+                            사직 | 18:30
+                        </div>
+                        <div class="game_now">
+                            경기 예정
+                        </div>
+                        <div class="game_team">
+                            <a href="https://www.ncdinos.com/">
+                                <img class="game_team_img"
+                                     src="https://www.ncdinos.com/m/assets/images/sub/emblem01.png">
+                            </a>
+                            <img class="game_team_vs" src="https://liquipedia.net/commons/images/0/0e/VS_Gaming.png">
+                            <a href="https://www.giantsclub.com/html/index.asp?">
+                                <img class="game_team_img"
+                                     src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png">
+                            </a>
+                        </div>
+                        <div class="game_view">
+                            <a href="https://ticket.giantsclub.com/loginForm.do">
+                                <button id="game_ticket_btn" type="button" class="btn btn-primary">TICKET</button>
+                            </a>
+                            <a href="#">
+                                <button id="game_preview_btn" type="button" class="btn btn-danger">PREVIEW</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="schedule_game">
+                        <div class="game_info">
+                            수원 | 18:30
+                        </div>
+                        <div class="game_now">
+                            경기 예정
+                        </div>
+                        <div class="game_team">
+                            <a href="https://www.hanwhaeagles.co.kr/index.do">
+                                <img class="game_team_img"
+                                     src="https://t1.daumcdn.net/cfile/tistory/99969E485ECE41B231">
+                            </a>
+                            <img class="game_team_vs" src="https://liquipedia.net/commons/images/0/0e/VS_Gaming.png">
+                            <a href="https://www.ktwiz.co.kr/">
+                                <img class="game_team_img"
+                                     src="https://t1.daumcdn.net/cfile/tistory/9924D8385ECE3EB72F">
+                            </a>
+                        </div>
+                        <div class="game_view">
+                            <a href="https://www.ktwiz.co.kr/ticket/reservation">
+                                <button id="game_ticket_btn" type="button" class="btn btn-primary">TICKET</button>
+                            </a>
+                            <a href="#">
+                                <button id="game_preview_btn" type="button" class="btn btn-danger">PREVIEW</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="schedule_game">
+                        <div class="game_info">
+                            광주 | 18:30
+                        </div>
+                        <div class="game_now">
+                            경기 예정
+                        </div>
+                        <div class="game_team">
+                            <a href="https://www.doosanbears.com/">
+                                <img class="game_team_img"
+                                     src="https://t1.daumcdn.net/cfile/tistory/9916FE435ECD1F280F">
+                            </a>
+                            <img class="game_team_vs" src="https://liquipedia.net/commons/images/0/0e/VS_Gaming.png">
+                            <a href="https://tigers.co.kr/">
+                                <img class="game_team_img"
+                                     src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png">
+                            </a>
+                        </div>
+                        <div class="game_view">
+                            <a href="https://tigers.co.kr/ticket/reservation">
+                                <button id="game_ticket_btn" type="button" class="btn btn-primary">TICKET</button>
+                            </a>
+                            <a href="#">
+                                <button id="game_preview_btn" type="button" class="btn btn-danger">PREVIEW</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule_cancel">
+                    <button id="cancel_btn" type="button" class="btn btn-outline-secondary">
+                        경기 취소 규정
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sports_news" id="main_3">
+            <div class="news_inside">
+                <div class="news_start">
+                    <span>BASEBALL NEWS TODAY</span>
+                </div>
+                <div class="news_details">
+                    <div class="news_info">
+                        <a href="https://sports.news.naver.com/news?oid=477&aid=0000373543">
+                            <img class="news_img"
+                                 src="https://imgnews.pstatic.net/image/477/2022/07/29/0000373543_001_20220729000702030.jpg?type=w647">
+                        </a>
+                        <p class="news_date">2022-08-05 | 스포티비뉴스</p>
+                        <p class="news_title">'후반기 4승1패' SSG 질주가 멈추질 않는다…2위와는 어느새 6게임차[SPO 이슈]</p>
+                        <a class="news_read" href="https://sports.news.naver.com/news?oid=477&aid=0000373543">
+                            <span>READ MORE -></span>
+                        </a>
+                    </div>
+                    <div id="news_info_middle" class="news_info">
+                        <a href="https://sports.news.naver.com/news?oid=241&aid=0003222899">
+                            <img class="news_img"
+                                 src="https://imgnews.pstatic.net/image/241/2022/07/29/0003222899_001_20220729000401452.jpg?type=w647">
+                        </a>
+                        <p class="news_date">2022-08-05 | 일간스포츠</p>
+                        <p class="news_title">'손가락 골절' 삼성 이재현, 신인왕 경쟁도 멀어졌다</p>
+                        <a class="news_read" href="https://sports.news.naver.com/news?oid=241&aid=0003222899">
+                            <span>READ MORE -></span>
+                        </a>
+                    </div>
+                    <div class="news_info">
+                        <a href="https://sports.news.naver.com/news?oid=025&aid=0003213142">
+                            <img class="news_img"
+                                 src="https://imgnews.pstatic.net/image/025/2022/07/29/0003213142_001_20220729000414557.jpg?type=w647">
+                        </a>
+                        <p class="news_date">2022-08-05 | 중앙일보</p>
+                        <p class="news_title">‘가을야구’팀 벌써 확정? 5강 굳어져간다</p>
+                        <a class="news_read" href="https://sports.news.naver.com/news?oid=025&aid=0003213142">
+                            <span>READ MORE -></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="news_more">
+                    <a href="https://sports.news.naver.com/kbaseball/news/index?isphoto=N&type=popular">
+                        <button id="news_more_btn" type="button" class="btn btn-outline-secondary">VIEW ALL NEWS
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="coco_92_info" id="main_4">
+            <div class="info_inside">
+                <div class="info_left">
+                    <div class="info_title">
+                        <a href="" style="color: white; text-decoration: none"><b>SPORTS 92</b></a>
+                    </div>
+                    <div class="info_about">
+                        <div id="info_about_top">성균관대학교 소프트웨어융합대학 글로벌융합학부 인공지능융합전공</div>
+                        <div id="info_about_bottom">서울특별시 종로구 성균관로 25-2 인문사회과학캠퍼스 국제관</div>
+                    </div>
+                    <div class="info_extra">
+                        <a href="https://github.com/SeanKim37" style="text-decoration: none; color: darkgray">
+                            <b class="info_extra_name">김수민</b> <span class="info_extra_major">인지20</span>
+                        </a>
+                        <a href="#" style="text-decoration: none; color: darkgray">
+                            <b class="info_extra_name">조재희</b> <span class="info_extra_major">인지21</span>
+                        </a>
+                        <a href="#" style="text-decoration: none; color: darkgray">
+                            <b class="info_extra_name">최연제</b> <span class="info_extra_major">인지21</span>
+                        </a>
+                        <a href="https://github.com/hwangsaeyeon" style="text-decoration: none; color: darkgray">
+                            <b class="info_extra_name">황새연</b> <span class="info_extra_major">인지20</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="info_right">
+                    <a href="https://www.skku.edu/skku/index.do">
+                        <img class="info_right_img" src="https://www.skku.edu/_res/skku/img/skku_s.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
