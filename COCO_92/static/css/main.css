@@ -1,25 +1,29 @@
 
-.container-fluid{
+.container-fluid {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
+
 .navbar_right {
     display: flex;
     margin-left: 150px;
 }
-.navbar-brand_img{
+
+.navbar-brand_img {
     height: 80px;
     width: 80px;
     object-fit: cover;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
 }
-.navbar-brand_img:hover{
+
+.navbar-brand_img:hover {
     transform: scale(137%);
 }
-.navbar_select{
+
+.navbar_select {
     text-decoration: none;
     color: white;
     margin-left: 80px;
@@ -28,37 +32,43 @@
     font-weight: bold;
     transition: all 0.1s ease-in-out;
 }
+
 .navbar_select:hover {
     color: skyblue;
     font-size: 22px;
     margin-top: 25px;
 }
+
 .navbar_left {
     margin-right: 147px;
 }
-.navbar_login{
+
+.navbar_login {
     text-decoration: none;
     font-size: 16px;
-    color:lightgray;
+    color: lightgray;
     margin-right: 3px;
     transition: all 0.1s ease-in-out;
 }
-.navbar_login:hover{
+
+.navbar_login:hover {
     color: lightpink;
     font-weight: bold;
 }
-.navbar_login_middle{
+
+.navbar_login_middle {
     text-decoration: none;
     font-size: 16px;
-    color:lightgray;
+    color: lightgray;
     margin-right: 3px;
     transition: all 0.1s ease-in-out;
 }
-.navbar_login_middle:hover{
+
+.navbar_login_middle:hover {
     color: lightgray;
 }
 
-.main_inside{
+.main_inside {
     width: 100%;
     background: #020715;
     color: white;
@@ -66,14 +76,14 @@
 
 }
 
-.video_inside{
+.video_inside {
     background: #020715;
     padding-top: 0px;
-    width: 1519px;
+    width: 100%;
     height: 854px;
 }
 
-.schedule_inside{
+.schedule_inside {
     background: #020715;
     margin-top: 110px;
     padding: 0px 170px;
@@ -82,25 +92,29 @@
     width: 100%;
     height: 100%;
 }
-.schedule_way{
+
+.schedule_way {
     color: white;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
-.schedule_way:hover{
+
+.schedule_way:hover {
     color: gray;
 }
+
 .schedule_date {
     font-size: 28px;
     font-weight: bold;
     margin-left: 50px;
     margin-right: 40px;
 }
+
 .schedule_date_day {
     font-size: 25px;
 }
 
-.schedule_team{
+.schedule_team {
     width: 100%;
     height: 300px;
     margin-top: 40px;
@@ -109,7 +123,7 @@
     justify-content: space-between;
 }
 
-.schedule_game{
+.schedule_game {
     background: papayawhip;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -125,17 +139,20 @@
     opacity: 0.6;
     transition: all 0.3s ease-in-out;
 }
+
 .schedule_game:hover {
     opacity: 1;
     transform: scale(106%);
     border: solid 6px white;
 }
-.game_info{
+
+.game_info {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
-.game_now{
+
+.game_now {
     margin-left: 55px;
     font-size: 13px;
     font-weight: bold;
@@ -146,24 +163,28 @@
     width: 110px;
 }
 
-.game_team{
+.game_team {
     width: 100%;
 }
-.game_team_img{
+
+.game_team_img {
     width: 80px;
     height: 80px;
     object-fit: contain;
     transition: all 0.3s ease-in-out;
 }
-.game_team_img:hover{
+
+.game_team_img:hover {
     transform: scale(125%);
 }
-.game_team_vs{
+
+.game_team_vs {
     width: 25px;
     height: 25px;
 
 }
-.game_view{
+
+.game_view {
     margin-left: 14px;
     margin-right: 14px;
     display: flex;
@@ -171,18 +192,22 @@
     justify-content: space-between;
 
 }
-#game_ticket_btn{
+
+#game_ticket_btn {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
-#game_ticket_btn:hover{
+
+#game_ticket_btn:hover {
     transform: scale(106%);
 }
-#game_preview_btn{
+
+#game_preview_btn {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
-#game_preview_btn:hover{
+
+#game_preview_btn:hover {
     transform: scale(106%);
 }
 
@@ -192,7 +217,8 @@
     padding-right: 30px;
     text-align: right;
 }
-#cancel_btn{
+
+#cancel_btn {
     padding: 0px 6px;
     font-weight: bold;
     height: 30px;
@@ -200,7 +226,8 @@
     color: darkgray;
     transition: all 0.3s ease-in-out;
 }
-#cancel_btn:hover{
+
+#cancel_btn:hover {
     color: white;
     transform: scale(112%);
 }
@@ -209,11 +236,13 @@
     margin-top: 200px;
     background: #020715;
 }
+
 .news_start {
     text-align: center;
     font-size: 50px;
     font-weight: bold;
 }
+
 .news_details {
     display: flex;
     flex-direction: row;
@@ -222,6 +251,7 @@
     width: 100%;
     height: 100%;
 }
+
 .news_img {
     width: 392px;
     height: 272px;
@@ -231,43 +261,53 @@
     opacity: 0.6;
     transition: all 0.3s ease-in-out;
 }
+
 .news_img:hover {
     opacity: 1;
     transform: scale(106%);
 }
+
 .news_date {
     margin-top: 16px;
     font-size: 14px;
     font-weight: bold;
 }
+
 .news_title {
     font-size: 21px;
     font-weight: bold;
 }
+
 .news_read {
     font-weight: bold;
     font-size: 16px;
     color: lightgray;
 }
+
 .news_read:hover {
     color: lightpink;
 }
+
 .news_info {
     width: 392px;
 }
+
 .news_more {
     text-align: center;
     margin-top: 40px;
 }
+
 #news_info_middle {
     margin: 0px 42px;
 }
+
 #news_more_btn {
     color: lightgray;
     width: 240px;
     border-radius: 25px;
     font-size: 20px;
 }
+
 #news_more_btn:hover {
     color: white;
     font-weight: bold;
@@ -281,24 +321,30 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .info_left {
     margin-left: 175px;
 }
+
 .info_title {
     padding-top: 25px;
     font-size: 50px;
     font-weight: bold;
 }
+
 .info_about {
     font-size: 14px;
     color: darkgray;
 }
+
 #info_about_top {
     padding-top: 20px;
 }
+
 #info_about_bottom {
     padding-top: 10px
 }
+
 .info_extra {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -307,23 +353,28 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .info_extra_name {
     font-size: 14px;
     color: darkgray;
     transition: all 0.05s ease-in-out;
 }
+
 .info_extra_name:hover {
     font-size: 20px;
     color: skyblue;
 }
+
 .info_extra_major {
     font-size: 12px;
 }
+
 .info_right {
     margin-right: 175px;
     margin-bottom: 50px;
     padding-top: 50px;
 }
+
 .info_right_img {
     height: 160px;
     width: 160px;
@@ -331,6 +382,7 @@
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
+
 .info_right_img:hover {
     transform: scale(115%);
 }
