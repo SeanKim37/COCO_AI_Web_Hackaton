@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'COCO_92',
+    'winlose',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,411 @@
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.navbar_right {
+    display: flex;
+    margin-left: 150px;
+}
+
+.navbar-brand_img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-brand_img:hover {
+    transform: scale(137%);
+}
+
+.navbar_select {
+    text-decoration: none;
+    color: white;
+    margin-left: 80px;
+    margin-top: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar_select:hover {
+    color: skyblue;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+.navbar_left {
+    margin-right: 147px;
+}
+
+.navbar_login {
+    text-decoration: none;
+    font-size: 16px;
+    color: lightgray;
+    margin-right: 3px;
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar_login:hover {
+    color: lightpink;
+    font-weight: bold;
+}
+
+.navbar_login_middle {
+    text-decoration: none;
+    font-size: 16px;
+    color: lightgray;
+    margin-right: 3px;
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar_login_middle:hover {
+    color: lightgray;
+}
+
+.winlose_content {
+    background: #020715;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    color: white;
+}
+
+.rate_inside {
+    padding-top: 50px;
+    background: #020715;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.away_rate {
+    transform: skew(-30deg);
+    width: 500px;
+    min-width: 70px;
+    max-width: 930px;
+    height: 35px;
+    background: skyblue;
+    text-align: right;
+}
+
+.home_rate {
+    transform: skew(-30deg);
+    width: 500px;
+    min-width: 70px;
+    max-width: 930px;
+    height: 35px;
+    background: lightpink;
+    text-align: left;
+}
+
+.away_rate_text {
+    transform: skew(10deg);
+    font-size: 23px;
+    font-weight: bold;
+    margin-right: 15px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.home_rate_text {
+    transform: skew(10deg);
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 15px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.rate_beside {
+    width: 20px;
+    height: 35px;
+}
+
+.player_inside {
+    height: 420px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.player_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.player_num {
+    font-weight: normal;
+    text-shadow: 1px 1px 1px gray;
+    font-size: 16px;
+    width: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 42px;
+    border-bottom: 1px solid dimgray;
+}
+
+.detail_num {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    width: 35px;
+    text-align: center;
+}
+
+.detail_name {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    text-align: center;
+}
+
+.detail_position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    text-align: center;
+}
+
+.detail_team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    text-align: center;
+}
+
+.detail_plus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.detail_plus:hover {
+    filter: invert(50%);
+    cursor: pointer;
+}
+
+.player_vs {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.player_vs_img {
+    margin-top: 150px;
+    width: 80px;
+    height: 80px;
+    filter: invert(90%);
+    margin-left: 7px;
+}
+
+#player_predict_btn {
+    letter-spacing: 1px;
+    margin-bottom: 100px;
+    font-weight: bold;
+    filter: invert(10%);
+    font-size: 16px;
+}
+
+#player_predict_btn:hover {
+    background: dimgray;
+    color: white;
+}
+
+.add_inside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 35px;
+    width: 100%;
+}
+
+#add_btn {
+    width: 350px;
+    background: #ebd3b0;
+    color: black;
+    border-radius: 20px;
+    border: 2px solid gray;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #FFF;
+    letter-spacing: 7px;
+    padding-left: 25px;
+}
+
+#add_btn:hover {
+    background: rosybrown;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    box-shadow: 0px 0px 10px #FFF;
+}
+
+.park_inside {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.park_baseball {
+    width: 500px;
+    height: 500px;
+    margin-right: 80px;
+    position: relative;
+}
+
+.park_img {
+    width: 100%;
+    height: 100%;
+}
+
+.park_img:hover {
+    filter: invert(100%);
+}
+
+.park_ball {
+    top: 53px;
+    left: 380px;
+    position: absolute;
+}
+
+.park_ball_img {
+    width: 10px;
+    height: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.park_ball_img:hover {
+    width: 100px;
+    height: 100px;
+}
+
+.park_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 550px;
+    height: 500px;
+}
+
+.park_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 10px;
+    padding-top: 20px;
+    border-bottom: 2px solid dimgray;
+    text-shadow: 3px 3px 3px lightgreen;
+    padding-left: 10px;
+}
+
+.park_detail {
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.info_inside {
+    margin-left: 50px;
+    background: #020715;
+    margin-top: 100px;
+    border-top: solid 3px dimgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info_left {
+    margin-left: 175px;
+}
+
+.info_title {
+    padding-top: 25px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.info_about {
+    font-size: 14px;
+    color: darkgray;
+}
+
+#info_about_top {
+    padding-top: 20px;
+}
+
+#info_about_bottom {
+    padding-top: 10px
+}
+
+.info_extra {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 431px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info_extra_name {
+    font-size: 14px;
+    color: darkgray;
+    transition: all 0.05s ease-in-out;
+}
+
+.info_extra_name:hover {
+    font-size: 20px;
+    color: skyblue;
+}
+
+.info_extra_major {
+    font-size: 12px;
+}
+
+.info_right {
+    margin-right: 175px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+.info_right_img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.info_right_img:hover {
+    transform: scale(115%);
+}
+

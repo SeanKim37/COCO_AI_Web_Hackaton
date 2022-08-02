@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import Main
+from winlose.views import winningRate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Main.as_view())
+    path('', Main.as_view()),
+    path('winlose/', winningRate.as_view()),
 ]
