@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import Main
-from winlose.views import winningRate
+from winlose.views import WinningRate
+from kbo_team.views import KboTeam
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Main.as_view()),
-    path('winlose/', winningRate.as_view()),
+    path('winlose/', WinningRate.as_view()),
+    path('kbo-team/', KboTeam.as_view()),
 ]

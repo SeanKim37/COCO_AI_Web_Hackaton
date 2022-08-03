@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'COCO_92',
     'winlose',
+    'kbo_team',
 ]
 
 MIDDLEWARE = [
