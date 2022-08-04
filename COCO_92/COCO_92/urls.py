@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import Main, Vision, About
-from winlose.views import WinningRate
+from winlose.views import WinningRate, UploadWar92
 from kbo_team.views import KboTeam
 
 
@@ -29,4 +29,5 @@ urlpatterns = [
     path('ability/', include('appWAR.urls')),
     path('vision92/', Vision.as_view()),
     path('about92/', About.as_view()),
+    path('winlose/upload/', UploadWar92.as_view())
 ]

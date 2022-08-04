@@ -17,5 +17,14 @@ class WinningRate(APIView):
 
 class UploadWar92(APIView):
     def post(self, request):
+        play_id = request.data.get('play_id')
+        name = request.data.get('name')
+        pit_hit = request.data.get('pit_hit')
+        position = request.data.get('position')
+        team = request.data.get('team')
+        war = request.data.get('war')
+
+        War92.objects.create(play_id=play_id, name=name, pit_hit=pit_hit, position=position, team=team, war=war)
+
         return Response(status=200)
 

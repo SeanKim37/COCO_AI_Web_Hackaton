@@ -96,16 +96,37 @@ th {
     text-shadow: 0 1px 3px #1F1F1F;
 }
 
+#save_war {
+    margin-left: 20px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#name_name {
+    height: 25px;
+    font-size: 14px;
+    margin-left: 20px;
+    width: 80px;
+}
+
+#save_war:hover {
+    color: brown;
+    transform: scale(120%);
+}
+
 
 /*war explain 왼쪽 하단 */
 .war_explain_title {
-    margin-top: 130px;
     text-align: left;
     color: #9b9b9b;
     padding-left: 30px;
     font-family: 'Noto Sans KR';
     font-weight: bold;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .war_explain {
@@ -114,7 +135,7 @@ th {
     color: #9b9b9b;
     font-family: 'Noto Sans KR';
     padding-left: 30px;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 

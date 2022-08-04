@@ -55,11 +55,17 @@ def WAR(request):
         if y_pred < 0:
             transformed_val = y_pred * 5
             transformed_val = 50 - transformed_val
-            transformed_val = transformed_val.astype(int)
+            if transformed_val < 0:
+                transformed_val = 0.0
+            else:
+                transformed_val = transformed_val.astype(int)
         else:
             transformed_val = y_pred * 5
             transformed_val = 50 + transformed_val
-            transformed_val = transformed_val.astype(int)
+            if transformed_val > 100:
+                transformed_val = 100.0
+            else:
+                transformed_val = transformed_val.astype(int)
 
         # balancing style을 위한 코드 정의
         ls = list()
