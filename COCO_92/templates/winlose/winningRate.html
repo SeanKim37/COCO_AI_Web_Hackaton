@@ -19,6 +19,11 @@
     <!-- Jquery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+    <!-- TensorFlow -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"> </script>
+
+
     <title>SPORTS 92</title>
 
     <style>
@@ -68,12 +73,12 @@
 <div class="winlose_content">
     <div class="winlose_rate" id="winlose_1">
         <div class="rate_inside">
-            <div class="away_rate">
-                <div class="away_rate_text">PRESS</div>
+            <div id="away_rate_predict" class="away_rate">
+                <div id="away_predict_text" class="away_rate_text">PRESS</div>
             </div>
             <div class="rate_beside"></div>
-            <div class="home_rate">
-                <div class="home_rate_text">PREDICT</div>
+            <div id="home_rate_predict" class="home_rate">
+                <div id="home_predict_text" class="home_rate_text">PREDICT</div>
             </div>
         </div>
     </div>
@@ -414,7 +419,10 @@
 </div>
 
 <!-- JavaScript 연동 -->
-<script src="{% static 'javascript/winlose.js' %}"></script>
+<script src="{% static 'javascript/team_select.js' %}"></script>
+
+<script src="{% static 'javascript/winlose_predict.js' %}">
+</script>
 
 </body>
 </html>

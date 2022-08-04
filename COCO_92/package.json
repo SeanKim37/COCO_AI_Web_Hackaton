@@ -1,0 +1,7 @@
+{
+  "name": "COCO_92",
+  "version": "1.0.0",
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.19.0"
+  }
+}
