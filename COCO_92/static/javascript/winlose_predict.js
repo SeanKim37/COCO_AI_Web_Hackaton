@@ -21,7 +21,7 @@ let home_rate_predict = document.getElementById('home_rate_predict');
 let away_predict_text = document.getElementById('away_predict_text');
 let home_predict_text = document.getElementById('home_predict_text');
 
-function player_predict_btn_click(checkAI) {
+function player_predict_btn_click() {
     console.log('winlose_data');
     winlose_x = tf.tensor2d([winlose_data]);
     winlose_y = model.predict(winlose_x);
@@ -40,9 +40,5 @@ function player_predict_btn_click(checkAI) {
     away_predict_text.textContent = away_rate_value;
     home_predict_text.textContent = home_rate_value;
 
-    if (checkAI == '0') {
-        alert("인공지능이 예측한 경기 결과입니다!");
-    } else if (checkAI == '1') {
-        alert("변경된 선수로 인공지능이 예측한 경기 결과입니다!");
-    }
+    alert("인공지능이 예측한 경기 결과입니다!");
 }

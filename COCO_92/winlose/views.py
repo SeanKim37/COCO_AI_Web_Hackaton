@@ -11,7 +11,7 @@ from winlose.models import War92
 
 class WinningRate(APIView):
     def get(self, request):
-        players_list = War92.objects.all().order_by('team')
+        players_list = War92.objects.all().order_by('-war')
         return render(request, "winlose/winningRate.html", context=dict(players=players_list))
 
 

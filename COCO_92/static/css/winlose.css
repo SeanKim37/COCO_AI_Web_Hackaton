@@ -88,21 +88,37 @@
 .away_rate {
     transform: skew(-30deg);
     width: 500px;
-    min-width: 70px;
-    max-width: 930px;
+    min-width: 100px;
+    max-width: 900px;
     height: 35px;
     background: skyblue;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .home_rate {
     transform: skew(-30deg);
     width: 500px;
-    min-width: 70px;
-    max-width: 930px;
+    min-width: 100px;
+    max-width: 900px;
     height: 35px;
     background: lightpink;
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bar_bar {
+    visibility: hidden;
+}
+
+
+.bar_image {
+    margin: 0px 10px;
+    transform: skew(30deg);
+    width: 33px;
+    height: 33px;
 }
 
 .away_rate_text {
@@ -275,6 +291,7 @@
     color: white;
     margin-right: 470px;
 }
+
 
 #home_change:hover {
     filter: invert(50%);
@@ -508,8 +525,9 @@
     -webkit-backdrop-filter: blur(13.5px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 450px;
+    width: 1030px;
     height: 600px;
+    max-height: 600px;
     position: relative;
     padding: 10px;
     text-align: center;
@@ -549,30 +567,30 @@
     cursor: pointer;
 }
 
-#player_select_check {
-    padding-right: 20px;
+.check_box {
+    padding-left: 10px;
+    padding-right: 10px;
     transition: all 0.2s ease-in-out;
 }
 
-#player_select_check:hover {
+.check_box:hover {
     transform: scale(140%);
     cursor: pointer;
 }
 
-#player_select_team {
-    padding-left: 20px;
+.player_select_team {
     text-shadow: 1px 1px 1px #FFF;
-    width: 80px;
+    width: 50px;
     font-weight: bold;
 }
 
-#player_select_name {
+.player_select_name {
     text-shadow: 1px 1px 1px #FFF;
-    width: 130px;
+    width: 100px;
     font-weight: bold;
 }
 
-#player_selext_position {
+.player_selext_position {
     width: 70px;
     text-shadow: 1px 1px 1px #FFF;
     font-weight: bold;

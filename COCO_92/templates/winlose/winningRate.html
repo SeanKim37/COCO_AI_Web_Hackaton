@@ -74,11 +74,13 @@
     <div class="winlose_rate" id="winlose_1">
         <div class="rate_inside">
             <div id="away_rate_predict" class="away_rate">
+                <div id="away_bar_bar" class="bar_bar"><img id="away_bar_img" class="bar_image" src=""></div>
                 <div id="away_predict_text" class="away_rate_text">PRESS</div>
             </div>
             <div class="rate_beside"></div>
             <div id="home_rate_predict" class="home_rate">
                 <div id="home_predict_text" class="home_rate_text">PREDICT</div>
+                <div id="home_bar_bar" class="bar_bar"><img id="home_bar_img" class="bar_image" src=""></div>
             </div>
         </div>
     </div>
@@ -203,7 +205,7 @@
             </div>
             <div class="player_vs">
                 <img class="player_vs_img" src="https://liquipedia.net/commons/images/0/0e/VS_Gaming.png">
-                <button id="player_predict_btn" onclick="player_predict_btn_click('0')" type="button"
+                <button id="player_predict_btn" onclick="player_predict_btn_click()" type="button"
                         class="btn btn-light">PREDICT
                 </button>
             </div>
@@ -440,7 +442,7 @@
     </div>
 </div>
 
-<!-- Team Modal -->
+<!-- Player Modal -->
 <div id="player_modal" class="modal_overlay">
     <div class="player_modal_window">
         <div class=window_inside"
@@ -449,25 +451,217 @@
             <div>SELECT PLAYER</div>
             <div><span id="player_back" class="material-icons-outlined">close</span></div>
         </div>
-        <div class="player_space"
-             style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 428px; max-height: 530px; height: 530px;">
-            {% for player in players %}
-                {% if player.team == "SSG" %}
-                    <div class="player_select_info"
-                         style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; font-size: 16px; margin-top: 3px; padding: 3px 10px; display: flex; flex-direction: row; justify-content: space-between;">
-                        <div id="player_select_team">{{ player.team }}</div>
-                        <div id="player_select_name">{{ player.name }}</div>
-                        <div id="player_selext_position">{{ player.position }}</div>
-                        <div><span id="player_select_check"
-                                   onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
-                                   class="check_box material-icons-outlined">check_box</span></div>
-                    </div>
-                {% endif %}
+        <div class="play_space"
+             style="border-top: 2px solid gray; display: flex; flex-direction: column; justify-content: space-between; max-height: 530px; overflow-y: auto; width: 1000px; padding: 10px 20px">
+            <div class="space_first"
+                 style="padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "SSG" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "키움" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "LG" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
 
-                {#                {% if player.team == "SSG" %}#}
-                {#                    <div>asd</div>#}
-                {#                {% endif %}#}
-            {% endfor %}
+            <div class="space_first"
+                 style="padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "KT" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "KIA" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "두산" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="space_first"
+                 style=" padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "롯데" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "NC" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "삼성" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="space_first"
+                 style=" padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "한화" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "기타" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="player_space"
+                     style="visibility: hidden; background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                    {% for player in players %}
+                        {% if player.team == "기타" %}
+                            <div class="player_select_info"
+                                 style="height: 200px; border-bottom: 1px solid gray; font-weight: normal; padding-top: 10px; font-size: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div class="player_select_team">{{ player.team }}</div>
+                                <div class="player_select_name">{{ player.name }}</div>
+                                <div class="player_selext_position">{{ player.position }}</div>
+                                <div><span
+                                        onclick="check_box_click('{{ player.name }}', '{{ player.team }}', '{{ player.position }}', '{{ player.war }}')"
+                                        class="check_box material-icons-outlined">check_box</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

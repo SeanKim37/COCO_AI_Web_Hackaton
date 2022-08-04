@@ -136,10 +136,16 @@ let home_detail_position_9 = document.getElementById("home_detail_position_9");
 let home_detail_team_9 = document.getElementById("home_detail_team_9");
 let home_detail_war_9 = document.getElementById("home_detail_war_9");
 
+let away_bar_img = document.getElementById('away_bar_img');
+let home_bar_img = document.getElementById('home_bar_img');
+let away_bar_bar = document.getElementById('away_bar_bar');
+let home_bar_bar = document.getElementById('home_bar_bar');
+
 let team_check = 0;
 let team_check_change = 0;
 let away_or_home = null;
 let team_fix = null;
+let bar_img = null;
 
 add_btn_away.onclick = add_btn_away_click;
 away_change.onclick = away_change_click;
@@ -182,6 +188,10 @@ function add_btn_home_click() {
 function team_img_click(team) {
     if (away_or_home == 'away') {
         team_fix = team_name_fix(team);
+
+        away_bar_bar.style.visibility = 'visible';
+        bar_img = team_logo_fix(team);
+        away_bar_img.src = bar_img;
 
         away_select.style.display = 'none';
         add_btn_away.style.display = 'none';
@@ -251,6 +261,10 @@ function team_img_click(team) {
 
     } else if (away_or_home == "home") {
         team_fix = team_name_fix(team);
+
+        home_bar_bar.style.visibility = 'visible';
+        bar_img = team_logo_fix(team);
+        home_bar_img.src = bar_img;
 
         home_select.style.display = 'none';
         add_btn_home.style.display = 'none';
@@ -329,7 +343,6 @@ function team_img_click(team) {
 }
 
 function team_name_fix(team) {
-
     let team_value = [];
     if (team == "SSG") {
         team_value = Team_SSG;
@@ -355,6 +368,34 @@ function team_name_fix(team) {
         console.log("팀명 변경 과정에서의 코드 문제")
     }
     return team_value;
+}
+
+
+function team_logo_fix(team) {
+    if (team == "SSG") {
+        bar_img = "https://upload.wikimedia.org/wikipedia/en/8/86/SSG_Landers.png";
+    } else if (team == "키움") {
+        bar_img = "http://ticketimage.interpark.com/TicketImage/sports/web/large/PB003.png";
+    } else if (team == "LG") {
+        bar_img = "https://www.lgtwins.com/images/twins_logoB.png";
+    } else if (team == "KT") {
+        bar_img = "https://t1.daumcdn.net/cfile/tistory/9924D8385ECE3EB72F";
+    } else if (team == "KIA") {
+        bar_img = "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/HT_300300.png";
+    } else if (team == "두산") {
+        bar_img = "https://t1.daumcdn.net/cfile/tistory/9916FE435ECD1F280F";
+    } else if (team == "롯데") {
+        bar_img = "http://t1.daumcdn.net/media/img-section/sports13/logo/team/1/LT_300300.png";
+    } else if (team == "NC") {
+        bar_img = "https://www.ncdinos.com/m/assets/images/sub/emblem01.png";
+    } else if (team == "삼성") {
+        bar_img = "https://t1.daumcdn.net/cfile/tistory/9981C0455ECE519338";
+    } else if (team == "한화") {
+        bar_img = "https://t1.daumcdn.net/cfile/tistory/99969E485ECE41B231";
+    } else {
+        console.log("팀명 변경 과정에서의 코드 문제")
+    }
+    return bar_img;
 }
 
 // TEAM MODAL 뒤로 가기
