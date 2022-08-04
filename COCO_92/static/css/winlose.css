@@ -391,7 +391,7 @@
     flex-direction: column;
     justify-content: left;
     width: 550px;
-    height: 500px;
+    height: 450px;
 }
 
 .park_title {
@@ -399,18 +399,43 @@
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 10px;
-    padding-top: 20px;
-    border-bottom: 2px solid dimgray;
-    text-shadow: 3px 3px 3px lightgreen;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    text-shadow: 2px 2px 2px lightgreen;
     padding-left: 10px;
 }
 
-.park_detail {
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+.park_team {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    text-align: left;
+    height: 100%;
+}
+
+.park_team_about_top {
+    font-weight: bold;
+    color: #ebd3b0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+    height: 30px;
+}
+
+.park_team_about {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.park_about {
+    margin: 0px 12px;
+    border-top: 1px solid gray;
+    text-align: center;
+    width: 50px;
 }
 
 .info_inside {
@@ -594,4 +619,9 @@
     width: 70px;
     text-shadow: 1px 1px 1px #FFF;
     font-weight: bold;
+}
+
+
+.player_space:hover {
+    opacity: 1;
 }

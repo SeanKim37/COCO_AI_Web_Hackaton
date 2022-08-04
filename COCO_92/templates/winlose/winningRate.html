@@ -356,11 +356,97 @@
             </div>
             <div class="park_info">
                 <div class="park_title">
-                    About WINLOSE
+                    2022 KBO League
                 </div>
-                <div class="park_detail">
-                    <p>1. 여기에 페이지 사용법에 관한 내용을 입력 바랍니다.</p>
-                    <p>2. 그 다음으로의 </p>
+                <div class="park_team">
+                    <div class="park_team_about_top">
+                        <div class="park_about park_team_rate">순위</div>
+                        <div class="park_about park_team_name">팀명</div>
+                        <div class="park_about park_team_name">경기</div>
+                        <div class="park_about park_team_name">승</div>
+                        <div class="park_about park_team_name">무</div>
+                        <div class="park_about park_team_name">패</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">1</div>
+                        <div class="park_about park_team_name">SSG</div>
+                        <div class="park_about park_team_name">96</div>
+                        <div class="park_about park_team_name">64</div>
+                        <div class="park_about park_team_name">3</div>
+                        <div class="park_about park_team_name">29</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">2</div>
+                        <div class="park_about park_team_name">키움</div>
+                        <div class="park_about park_team_name">97</div>
+                        <div class="park_about park_team_name">58</div>
+                        <div class="park_about park_team_name">2</div>
+                        <div class="park_about park_team_name">37</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">3</div>
+                        <div class="park_about park_team_name">LG</div>
+                        <div class="park_about park_team_name">94</div>
+                        <div class="park_about park_team_name">56</div>
+                        <div class="park_about park_team_name">1</div>
+                        <div class="park_about park_team_name">37</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">4</div>
+                        <div class="park_about park_team_name">KT</div>
+                        <div class="park_about park_team_name">94</div>
+                        <div class="park_about park_team_name">50</div>
+                        <div class="park_about park_team_name">2</div>
+                        <div class="park_about park_team_name">42</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">5</div>
+                        <div class="park_about park_team_name">KIA</div>
+                        <div class="park_about park_team_name">94</div>
+                        <div class="park_about park_team_name">48</div>
+                        <div class="park_about park_team_name">1</div>
+                        <div class="park_about park_team_name">45</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">6</div>
+                        <div class="park_about park_team_name">두산</div>
+                        <div class="park_about park_team_name">92</div>
+                        <div class="park_about park_team_name">41</div>
+                        <div class="park_about park_team_name">2</div>
+                        <div class="park_about park_team_name">49</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">7</div>
+                        <div class="park_about park_team_name">롯데</div>
+                        <div class="park_about park_team_name">96</div>
+                        <div class="park_about park_team_name">40</div>
+                        <div class="park_about park_team_name">4</div>
+                        <div class="park_about park_team_name">52</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">8</div>
+                        <div class="park_about park_team_name">NC</div>
+                        <div class="park_about park_team_name">93</div>
+                        <div class="park_about park_team_name">38</div>
+                        <div class="park_about park_team_name">3</div>
+                        <div class="park_about park_team_name">55</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">9</div>
+                        <div class="park_about park_team_name">삼성</div>
+                        <div class="park_about park_team_name">95</div>
+                        <div class="park_about park_team_name">38</div>
+                        <div class="park_about park_team_name">2</div>
+                        <div class="park_about park_team_name">55</div>
+                    </div>
+                    <div class="park_team_about">
+                        <div class="park_about park_team_rate">10</div>
+                        <div class="park_about park_team_name">한화</div>
+                        <div class="park_about park_team_name">95</div>
+                        <div class="park_about park_team_name">29</div>
+                        <div class="park_about park_team_name">2</div>
+                        <div class="park_about park_team_name">64</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -456,7 +542,7 @@
             <div class="space_first"
                  style="padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "SSG" %}
                             <div class="player_select_info"
@@ -472,7 +558,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "키움" %}
                             <div class="player_select_info"
@@ -488,7 +574,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "LG" %}
                             <div class="player_select_info"
@@ -508,7 +594,7 @@
             <div class="space_first"
                  style="padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "KT" %}
                             <div class="player_select_info"
@@ -524,7 +610,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "KIA" %}
                             <div class="player_select_info"
@@ -540,7 +626,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "두산" %}
                             <div class="player_select_info"
@@ -560,7 +646,7 @@
             <div class="space_first"
                  style=" padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "롯데" %}
                             <div class="player_select_info"
@@ -576,7 +662,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "NC" %}
                             <div class="player_select_info"
@@ -592,7 +678,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "삼성" %}
                             <div class="player_select_info"
@@ -612,7 +698,7 @@
             <div class="space_first"
                  style=" padding: 10px 0px; display: flex; flex-direction: row; justify-content: space-between">
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "한화" %}
                             <div class="player_select_info"
@@ -628,7 +714,7 @@
                     {% endfor %}
                 </div>
                 <div class="player_space"
-                     style="background: #ebd3b0; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
+                     style="background: #ebd3b0; opacity: 0.8; overflow-y: auto; display: flex; flex-direction: column; justify-content: left; border-top: solid 3px gray; width: 300px; max-height: 300px; height: 300px;">
                     {% for player in players %}
                         {% if player.team == "기타" %}
                             <div class="player_select_info"
