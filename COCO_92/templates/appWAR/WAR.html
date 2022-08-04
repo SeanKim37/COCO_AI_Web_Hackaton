@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+
+    <!-- CSS 연동 -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'cssWAR/style.css' %}?21after">
+    <link rel="stylesheet" href="{% static 'cssWAR/style_button.css' %}?1after">
+    <link rel="stylesheet" href="{% static 'cssWAR/style_input.css' %}?1after">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Google Icon -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>SPORTS 92</title>
+
+</head>
+<nav class="navbar"
+     style="border-bottom: solid 2px dimgray; padding: 0px 0px; background: #020715; position: fixed; top: 0; width: 100%; height: 100px; color: white">
+    <div class="container-fluid">
+        <div class="navbar_right">
+            <a class="navbar-brand" href="">
+                <img class="navbar-brand_img"
+                     src="http://drive.google.com/uc?export=view&id=1N5O7UUEnFgNh69PsGs-amuflr7v2SAeD">
+            </a>
+            <a class="navbar_select" href="/">
+                SPORTS 92
+            </a>
+            <a class="navbar_select" href="#">
+                ABILITY
+            </a>
+            <a class="navbar_select" href="../winlose">
+                WINLOSE
+            </a>
+            <a class="navbar_select" href="">
+                COMMUNITY
+            </a>
+        </div>
+        <div class="navbar_left">
+            <a class="navbar_login" href="">
+                LOGIN
+            </a>
+            <a class="navbar_login_middle">
+                |
+            </a>
+            <a class="navbar_login" href="">
+                JOIN
+            </a>
+        </div>
+    </div>
+</nav>
+
+<body style="background:black; margin-top:100px; color:white;">
+
+<div class="titleAlign">
+    <th id="tableTitle" ,>
+					<span class="bgC">
+							<span class='name' , id="titleName">타자</span>
+							<span class="title">WAR 예측</span>
+					</span>
+    </th>
+</div>
+<table id="predWAR">
+    <form method="post">
+
+        {% csrf_token %}
+
+        <tr id="row1"><!-- 첫번째 줄 시작 -->
+            <td rowspan="2">
+                <select class='select' , name="hitterPitcher" , id="id_select_hitterPitcher" ,
+                        onchange="selectCategory()">
+                    <option name='hitter' value="selectHitter">타자</option>
+                    <option name='pitcher' value="selectPitcher">투수</option>
+                </select>
+
+            </td>
+
+            <td id="1">
+                <div class="gmd gmd-1">
+							 <span id='h1' data_tooltip="최대 144, 최소 1, 평균 59">경기
+							 </span>
+                    <span class="input">
+								 <input name="one" , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span1"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id='2'>
+                <div class="gmd gmd-1">
+							 <span id='h2' data_tooltip="최대 672, 최소 0, 평균 183">타석
+							 </span>
+                    <span class="input">
+								 <input name="two" , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span2"></span>
+							 </span>
+
+                </div>
+            </td>
+
+
+            <td id='3'>
+                <div class="gmd gmd-1">
+							<span id='h3' data_tooltip="최대 600, 최소 0, 평균 161">타수
+							</span>
+                    <span class="input">
+								 <input name='three' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span3"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="4">
+                <div class="gmd gmd-1">
+                    <span id='h4' data_tooltip="최대 199, 최소 0, 평균 44">안타</span>
+                    <span class="input">
+								 <input name='four' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span4"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="5">
+                <div class="gmd gmd-1">
+                    <span id='h5' data_tooltip="최대 53, 최소 0, 평균 4">홈런</span>
+                    <span class="input">
+								 <input name='five' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span5"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="6">
+                <div class="gmd gmd-1">
+                    <span id='h6' data_tooltip="최대 130, 최소 0, 평균 23">득점</span>
+                    <span class="input">
+								 <input name='six' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span6"></span>
+							 </span>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr><!-- 두번째 줄 시작 -->
+            <td id="7">
+                <div class="gmd gmd-1">
+                    <span id='h7' data_tooltip="최대 146, 최소 1, 평균 22">타점</span>
+                    <span class="input">
+								 <input name='seven' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span7"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="8">
+                <div class="gmd gmd-1">
+                    <span id='h8' data_tooltip="최대 109, 최소 1, 평균 16">볼넷</span>
+                    <span class="input">
+								 <input name="eight" placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span8"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="9">
+                <div class="gmd gmd-1">
+                    <span id='h9' data_tooltip="최대 161, 최소 1, 평균 32">삼진</span>
+                    <span class="input">
+								 <input name='nine' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span9"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="10">
+                <div class="gmd gmd-1">
+                    <span id='h10' data_tooltip="최대 60, 최소 1, 평균 3">도루</span>
+                    <span class="input">
+								 <input name="ten" , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span10"></span>
+							 </span>
+                </div>
+            </td>
+
+            <td id="11">
+                <div class="gmd gmd-1">
+                    <span id='h11' data_tooltip="최대 1.0, 최소 0.0, 평균 0.22">타율</span>
+                    <span class="input">
+								 <input name='eleven' , placeholder="수 입력" required type="number" step="0.01">
+								 <span id="span11"></span>
+							 </span>
+                </div>
+            </td>
+
+
+            <td id="12">
+                <div id="box" , class="">
+                    <span id='h12' data_tooltip=""></span>
+                    <span class="input">
+								 <input id='hiddenInput' type='hidden' name='twelve' placeholder="수 입력" required
+                                        type="number" step="0.01">
+								 <span id="span12"></span>
+							 </span>
+                </div>
+            </td>
+
+
+        </tr>
+
+
+        <tr> <!-- 세번째 줄 시작 -->
+            <td id="send" colspan="8">
+
+                <button name="predict"
+                        class="button button--winona button--border-thick button--round-l button--text-upper button--size-s button--text-thick"
+                        data-text="예측하기" value="nxtpredict">
+                    <span>예측하기</span>
+                </button>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="banner" height=50px colspan="8">
+        </tr>
+
+    </form>
+</table>
+</body>
+
+<div class="final_info" id="winlose_5">
+    <div class="info_inside">
+        <div class="info_left">
+            <div class="info_title">
+                <a href="" style="color: white; text-decoration: none"><b>SPORTS 92</b></a>
+            </div>
+            <div class="info_about">
+                <div id="info_about_top">성균관대학교 소프트웨어융합대학 글로벌융합학부 인공지능융합전공</div>
+                <div id="info_about_bottom">서울특별시 종로구 성균관로 25-2 인문사회과학캠퍼스 국제관</div>
+            </div>
+            <div class="info_extra">
+                <a href="https://github.com/SeanKim37" style="text-decoration: none; color: darkgray">
+                    <b class="info_extra_name">김수민</b> <span class="info_extra_major">인지20</span>
+                </a>
+                <a href="https://github.com/hwangsaeyeon" style="text-decoration: none; color: darkgray">
+                    <b class="info_extra_name">황새연</b> <span class="info_extra_major">인지20</span>
+                </a>
+                <a href="#" style="text-decoration: none; color: darkgray">
+                    <b class="info_extra_name">조재희</b> <span class="info_extra_major">인지21</span>
+                </a>
+                <a href="#" style="text-decoration: none; color: darkgray">
+                    <b class="info_extra_name">최연제</b> <span class="info_extra_major">인지21</span>
+                </a>
+            </div>
+        </div>
+        <div class="info_right">
+            <a href="https://www.skku.edu/skku/index.do">
+                <img class="info_right_img" src="https://www.skku.edu/_res/skku/img/skku_s.png">
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</html>
+<script>
+
+
+    function changeState(span_id, get_id, tooltip_var, data_var, span_color = 'span2', tooltip_color = 'data_tooltip2', tooltip_reverse = 'data_tooltip') {
+        /*input 창 색 바꾸기(default=pink)*/
+        inputColor = document.getElementById(span_id);
+        parent = inputColor.parentElement;
+        parent.removeChild(inputColor);
+        span = parent.appendChild(document.createElement(span_color));
+        span.setAttribute('id', span_id);
+
+        /*툴팁창 색 바꾸기(default=pink)*/
+        tooltip = document.getElementById(get_id);
+        tooltip.removeAttribute(tooltip_reverse);
+        tooltip.setAttribute(tooltip_color, tooltip_var);
+
+        /*변수 이름 바꾸기*/
+        document.getElementById(get_id).innerHTML = data_var;
+
+    }
+
+    function selectCategory() {
+
+
+        var locSelect = document.getElementById("id_select_hitterPitcher");
+
+        // select element에서 선택된 option의 value가 저장된다.
+        var selectValue = locSelect.options[locSelect.selectedIndex].value;
+
+
+        if (selectValue == 'selectPitcher') {
+
+
+            document.getElementById("titleName").innerHTML = '<span class="name2">투수</span>'
+
+            changeState('span1', 'h1', '최대 22, 최소 0, 평균 3', '승리')
+            changeState('span2', 'h2', '최대 15, 최소 0, 평균 3', '패배')
+            changeState('span3', 'h3', '최대 44, 최소 0, 평균 1', '세이브')
+            changeState('span4', 'h4', '최대 40, 최소 0, 평균 2', '홀드')
+            changeState('span5', 'h5', '최대 10, 최소 0, 평균 2', '블론')
+            changeState('span6', 'h6', '최대 80, 최소 1, 평균 23', '경기')
+            changeState('span7', 'h7', '최대 34, 최소 0, 평균 5', '선발')
+            changeState('span8', 'h8', '최대 210, 최소 0, 평균 46', '이닝')
+            changeState('span9', 'h9', '최대 27.0, 최소 0.0, 평균 6.83', '삼진%9')
+            changeState('span10', 'h10', '최대 81.0, 최소 0.0, 평균 5.31', '볼넷%9')
+            changeState('span11', 'h11', '최대 27.0, 최소 0.0, 평균 1.15', '홈런%9')
+
+            changeState('span12', 'h12', '최대 135.0, 최소 0.0, 평균 6.79', 'ERA')
+            document.getElementById('box').setAttribute('class', 'gmd gmd-1')
+            document.getElementById('hiddenInput').setAttribute('type', 'text')
+
+
+        } else {
+            document.getElementById("titleName").innerHTML = '<span class="name">타자</span>'
+
+            changeState('span1', 'h1', '최대 144, 최소 1, 평균 59', '경기', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span2', 'h2', '최대 672, 최소 0, 평균 183', '타석', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span3', 'h3', '최대 600, 최소 0, 평균 161', '타수', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span4', 'h4', '최대 199, 최소 0, 평균 44', '안타', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span5', 'h5', '최대 53, 최소 0, 평균 4', '홈런', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span6', 'h6', '최대 130, 최소 0, 평균 23', '득점', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span7', 'h7', '최대 146, 최소 1, 평균 22', '타점', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span8', 'h8', '최대 109, 최소 1, 평균 16', '볼넷', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span9', 'h9', '최대 161, 최소 1, 평균 32', '삼진', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span10', 'h10', '최대 60, 최소 1, 평균 3', '도루', 'span', 'data_tooltip', 'data_tooltip2')
+            changeState('span11', 'h11', '최대 1.0, 최소 0.0, 평균 0.22', '타율', 'span', 'data_tooltip', 'data_tooltip2')
+
+
+            changeState('span12', 'h12', '', '', 'span2', 'data_tooltip2', 'data_tooltip')
+            document.getElementById('box').setAttribute('class', '')
+            document.getElementById('hiddenInput').setAttribute('type', 'hidden')
+
+        }
+
+    }
+
+
+</script>
