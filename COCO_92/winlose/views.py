@@ -6,13 +6,13 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from winlose.models import War92
+
 
 class WinningRate(APIView):
     def get(self, request):
-
-        # win_predict = os.path.dirname("C:/COCO_AI_Web_Hackaton/") + "\DNN_winningRate_model.h5"
-        # winlose_model = tf.keras.models.load_mdel(win_predict)
-        return render(request, "winlose/winningRate.html")
+        players_list = War92.objects.all().order_by('team')
+        return render(request, "winlose/winningRate.html", context=dict(players=players_list))
 
 
 class UploadWar92(APIView):
