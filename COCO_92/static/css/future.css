@@ -7,5 +7,18 @@
 
 .future_image {
     background: #020715;
-    width: 100%;
+    text-align: center;
+
+}
+
+.future_img {
+    width: 1136px;
+    height: 639px;
+}
+
+
+.future_imgs {
+    margin-bottom: 70px;
+    width: 1136px;
+    height: 639px;
 }
