@@ -53,11 +53,12 @@ def WAR(request):
         # -2.xx~11.xx까지 분포 -2 에서 8까지 있다고 봐도 무방 (최소: -2.27, 최대 11.73)
         # +12를 100으로 환산한다
         if y_pred < 0:
-            transformed_val = y_pred * 0
-        elif y_pred >= 11.73:
-            transformed_val = 100
+            transformed_val = y_pred * 5
+            transformed_val = 50 - transformed_val
+            transformed_val = transformed_val.astype(int)
         else:
-            transformed_val = y_pred * 8.33
+            transformed_val = y_pred * 5
+            transformed_val = 50 + transformed_val
             transformed_val = transformed_val.astype(int)
 
         # balancing style을 위한 코드 정의
@@ -66,17 +67,17 @@ def WAR(request):
             ls.append(str(list(y_pred)[0])[i])
 
         # 결과에 대한 주석 위한 코드
-        if transformed_val < 1 * 8.33:
+        if transformed_val < 42.5:
             idx = '최하위권'
-        elif transformed_val < 2 * 8.33:
+        elif transformed_val < 47.5:
             idx = '하위권'
-        elif transformed_val < 3 * 8.33:
+        elif transformed_val < 52.5:
             idx = '중하위권'
-        elif transformed_val < 4 * 8.33:
+        elif transformed_val < 57.5:
             idx = '중위권'
-        elif transformed_val < 5 * 8.33:
+        elif transformed_val < 62.5:
             idx = '중상위권'
-        elif transformed_val < 6 * 8.33:
+        elif transformed_val < 67.5:
             idx = '상위권'
         else:
             idx = '최상위권'
@@ -122,25 +123,26 @@ def WAR(request):
         # 92의 WAR값으로 변환
         # -1.xx~8.xx까지 분포 -1 에서 8까지 있다고 봐도 무방 (max:8.49, min:-1.35)
         if y_pred < 0:
-            transformed_val = 0
-        elif y_pred >= 8.49:
-            transformed_val = 100
+            transformed_val = y_pred * 5
+            transformed_val = 50 - transformed_val
+            transformed_val = transformed_val.astype(int)
         else:
-            transformed_val = y_pred * 11.1
+            transformed_val = y_pred * 5
+            transformed_val = 50 + transformed_val
             transformed_val = transformed_val.astype(int)
 
         # 결과에 대한 주석 위한 코드
-        if transformed_val < 1 * 11.1:
+        if transformed_val < 42.5:
             idx = '최하위권'
-        elif transformed_val < 2 * 11.1:
+        elif transformed_val < 47.5:
             idx = '하위권'
-        elif transformed_val < 3 * 11.1:
+        elif transformed_val < 52.5:
             idx = '중하위권'
-        elif transformed_val < 4 * 11.1:
+        elif transformed_val < 57.5:
             idx = '중위권'
-        elif transformed_val < 5 * 11.1:
+        elif transformed_val < 62.5:
             idx = '중상위권'
-        elif transformed_val < 6 * 11.1:
+        elif transformed_val < 67.5:
             idx = '상위권'
         else:
             idx = '최상위권'
