@@ -16,11 +16,11 @@
     width: 80px;
     object-fit: cover;
     overflow: hidden;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .navbar-brand_img:hover {
-    transform: scale(137%);
+    transform: scale(105%);
 }
 
 .navbar_select {

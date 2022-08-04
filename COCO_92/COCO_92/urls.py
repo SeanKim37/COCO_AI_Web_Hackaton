@@ -16,10 +16,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import Main
+from .views import Main, Vision, About
 from winlose.views import WinningRate
 from kbo_team.views import KboTeam
-from appWAR.views import WAR
 
 
 urlpatterns = [
@@ -28,4 +27,6 @@ urlpatterns = [
     path('winlose/', WinningRate.as_view()),
     path('kbo-team/', KboTeam.as_view()),
     path('ability/', include('appWAR.urls')),
+    path('vision92/', Vision.as_view()),
+    path('about92/', About.as_view()),
 ]
