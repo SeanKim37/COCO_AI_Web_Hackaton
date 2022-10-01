@@ -1,0 +1,24 @@
+.future_inside {
+    width: 100%;
+    background: #020715;
+    color: white;
+    padding-top: 100px;
+}
+
+.future_image {
+    background: #020715;
+    text-align: center;
+
+}
+
+.future_img {
+    width: 1136px;
+    height: 639px;
+}
+
+
+.future_imgs {
+    margin-bottom: 70px;
+    width: 1136px;
+    height: 639px;
+}
